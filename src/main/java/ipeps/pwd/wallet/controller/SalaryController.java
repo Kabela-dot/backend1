@@ -1,8 +1,7 @@
 package ipeps.pwd.wallet.controller;
 
 
-import ipeps.pwd.wallet.dto.EmployeeRequestDto;
-import ipeps.pwd.wallet.dto.EmployeeResponseDto;
+
 import ipeps.pwd.wallet.dto.SalaryRequestDto;
 import ipeps.pwd.wallet.dto.SalaryResponseDto;
 import ipeps.pwd.wallet.service.SalaryService;
@@ -53,7 +52,7 @@ public class SalaryController {
         return ResponseEntity.ok(salaryResponseDto);
     }
     @GetMapping("/amount/{amount}")
-    public ResponseEntity<SalaryResponseDto> findByAmount(@PathVariable() BigDecimal amount) {
+    public ResponseEntity<SalaryResponseDto> findByAmount(@PathVariable() Double amount) {
         SalaryResponseDto salaryResponseDto = salaryService.findByAmount(amount);
         return ResponseEntity.ok(salaryResponseDto);
     }

@@ -59,8 +59,8 @@ public class SalaryServiceImpl implements SalaryService{
     }
 
     @Override
-    public SalaryResponseDto findByAmount(BigDecimal amount) {
-        Salary salary = salaryDao.findByAmount(String.valueOf(amount));
+    public SalaryResponseDto findByAmount(Double amount) {
+        Salary salary = salaryDao.findByAmount(amount);
         return modelMapper.map(salary, SalaryResponseDto.class);
     }
 

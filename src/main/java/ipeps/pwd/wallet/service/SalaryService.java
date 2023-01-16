@@ -12,7 +12,7 @@ public interface SalaryService {
     SalaryResponseDto findById(Integer id);
     SalaryResponseDto findByCreate_date(Date date);
     SalaryResponseDto findByTitle(String title);
-    SalaryResponseDto findByAmount(BigDecimal amount);
+    SalaryResponseDto findByAmount(Double amount);
     SalaryResponseDto findByComment(String comment);
     void delete(Integer id);
     SalaryResponseDto update(SalaryRequestDto salaryRequestDto, Integer id);

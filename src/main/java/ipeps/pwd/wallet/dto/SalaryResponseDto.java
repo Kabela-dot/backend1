@@ -15,6 +15,6 @@ public class SalaryResponseDto {
     private Date create_date;
     private String title;
     private String comment;
-    private BigDecimal amount;
+    private Double amount;
 
 }

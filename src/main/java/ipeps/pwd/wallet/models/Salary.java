@@ -7,11 +7,10 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-@Table(name = "Salary")
+@Table()
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,7 +26,7 @@ public class Salary implements Serializable {
     private String title;
     private String comment;
     @Column(nullable = false)
-    private BigDecimal amount;
+    private Double amount;
     @OneToMany(mappedBy = "salary", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Employee>employees;
 }
